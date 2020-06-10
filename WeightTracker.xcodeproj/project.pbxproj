@@ -16,6 +16,7 @@
 		54FBD60224915D5E007557E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FBD60024915D5E007557E3 /* LaunchScreen.storyboard */; };
 		54FBD60A24915F30007557E3 /* EnterYourWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBD60924915F30007557E3 /* EnterYourWeightViewController.swift */; };
 		54FBD60C24915F90007557E3 /* WeightLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBD60B24915F90007557E3 /* WeightLogViewController.swift */; };
+		54FBD60E249162E2007557E3 /* UserWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBD60D249162E2007557E3 /* UserWeights.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		54FBD60324915D5E007557E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54FBD60924915F30007557E3 /* EnterYourWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterYourWeightViewController.swift; sourceTree = "<group>"; };
 		54FBD60B24915F90007557E3 /* WeightLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightLogViewController.swift; sourceTree = "<group>"; };
+		54FBD60D249162E2007557E3 /* UserWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWeights.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				54FBD60024915D5E007557E3 /* LaunchScreen.storyboard */,
 				54FBD60324915D5E007557E3 /* Info.plist */,
 				54FBD5FB24915D5D007557E3 /* WeightTracker.xcdatamodeld */,
+				54FBD60D249162E2007557E3 /* UserWeights.swift */,
 			);
 			path = WeightTracker;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				54FBD5F324915D5D007557E3 /* AppDelegate.swift in Sources */,
 				54FBD5FD24915D5D007557E3 /* WeightTracker.xcdatamodeld in Sources */,
 				54FBD5F524915D5D007557E3 /* SceneDelegate.swift in Sources */,
+				54FBD60E249162E2007557E3 /* UserWeights.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
