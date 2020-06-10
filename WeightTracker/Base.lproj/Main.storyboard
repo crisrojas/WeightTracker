@@ -77,6 +77,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save your weight"/>
                                 <connections>
+                                    <action selector="btnSavePressed:" destination="ROR-tl-Dee" eventType="touchUpInside" id="BqS-Rj-ROC"/>
                                     <segue destination="iCh-7G-S0l" kind="show" id="wXw-gi-hvm"/>
                                 </connections>
                             </button>
@@ -91,6 +92,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="txtWeight" destination="pMJ-U9-ALy" id="3rb-BT-yRv"/>
+                        <outlet property="units" destination="4Fq-pO-Q2p" id="yL9-ns-9IA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pug-jx-fdz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
