@@ -44,7 +44,18 @@ class EnterYourWeightViewController: UIViewController {
         
     }
     
-    
+    // Hide the keyboad
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        txtWeight.resignFirstResponder()
+        return true
+    }
+
+    func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)     {
+        self.view.endEditing(true)
+    }
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
