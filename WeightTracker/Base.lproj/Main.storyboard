@@ -43,12 +43,12 @@
         <!--Enter weight-->
         <scene sceneID="tpg-Fl-Ig0">
             <objects>
-                <viewController id="ROR-tl-Dee" sceneMemberID="viewController">
+                <viewController id="ROR-tl-Dee" customClass="EnterYourWeightViewController" customModule="WeightTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gon-2B-nZL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMJ-U9-ALy">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMJ-U9-ALy" customClass="EnterYourWeig">
                                 <rect key="frame" x="82" y="336" width="185" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="1750.7246376811595" y="462.72321428571428"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Weight Log View Controller-->
         <scene sceneID="95V-Qq-Eky">
             <objects>
-                <tableViewController id="iCh-7G-S0l" sceneMemberID="viewController">
+                <tableViewController id="iCh-7G-S0l" customClass="WeightLogViewController" customModule="WeightTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CkK-KW-Kxw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
