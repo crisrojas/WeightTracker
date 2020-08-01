@@ -86,7 +86,7 @@
                         <viewLayoutGuide key="safeArea" id="4nI-8S-Ouq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Enter weight" id="Vg6-bQ-8dk">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="gdz-NI-BA0">
+                        <barButtonItem key="rightBarButtonItem" title="Log" id="gdz-NI-BA0">
                             <connections>
                                 <segue destination="iCh-7G-S0l" kind="show" id="tzG-g7-VW4"/>
                             </connections>
@@ -124,7 +124,13 @@
                             <outlet property="delegate" destination="iCh-7G-S0l" id="bUW-kJ-ZxO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="hF7-Ll-v3K"/>
+                    <navigationItem key="navigationItem" id="hF7-Ll-v3K">
+                        <barButtonItem key="rightBarButtonItem" title="Clear Log" id="WWH-ES-ZPs">
+                            <connections>
+                                <action selector="btnClearLog:" destination="iCh-7G-S0l" id="3Uf-oK-pg8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tbLog" destination="CkK-KW-Kxw" id="hLV-qD-FFa"/>
                     </connections>

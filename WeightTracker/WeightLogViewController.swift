@@ -69,4 +69,27 @@ class WeightLogViewController: UITableViewController {
             }
         }
     }
+    
+    @IBAction func btnClearLog(_ sender: Any) {
+        let appDel = (UIApplication.shared.delegate) as! AppDelegate
+        let context = appDel.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserWeights")
+        request.returnsObjectsAsFaults = false
+        do {
+            let entries : Array = try context.fetch(request)
+            
+            for entry in entries {
+                let entry = entry as! UserWeights
+                context.delete(entry)
+                
+            }
+           try context.save()
+            totalEntries = 0
+            tbLog.reloadData()
+          
+        } catch {
+            print(error)
+        }
+    }
+    
 }
