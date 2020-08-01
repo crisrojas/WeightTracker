@@ -16,13 +16,13 @@ class EnterYourWeightViewController: UIViewController {
     @IBOutlet weak var txtWeight: UITextField!
     
     @IBAction func btnSavePressed(_ sender: Any) {
-        var appDel: AppDelegate = (UIApplication.shared.delegate as! AppDelegate)
-        var context: NSManagedObjectContext = appDel.persistentContainer.viewContext
+        let appDel: AppDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        let context: NSManagedObjectContext = appDel.persistentContainer.viewContext
         
         let ent = NSEntityDescription.entity(forEntityName: "UserWeights", in: context)!
 
         // Instance of our custom class, reference to entitiy
-        var newWeight = UserWeights(entity: ent, insertInto: context)
+        let newWeight = UserWeights(entity: ent, insertInto: context)
         // Fill in the Core Data
         newWeight.weight = txtWeight.text
         if(units.isOn) {

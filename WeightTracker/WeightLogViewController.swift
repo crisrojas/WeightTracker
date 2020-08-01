@@ -15,9 +15,9 @@ class WeightLogViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var appDel = (UIApplication.shared.delegate as! AppDelegate)
-        var context: NSManagedObjectContext = appDel.persistentContainer.viewContext
-        var request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserWeights")
+        let appDel = (UIApplication.shared.delegate as! AppDelegate)
+        let context: NSManagedObjectContext = appDel.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserWeights")
         request.returnsObjectsAsFaults = false
         do {
             totalEntries = try context.count(for: request)
@@ -35,13 +35,13 @@ class WeightLogViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "Default")
-        var appDel = (UIApplication.shared.delegate as! AppDelegate)
-        var context: NSManagedObjectContext = appDel.persistentContainer.viewContext
-        var request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserWeights")
+        let appDel = (UIApplication.shared.delegate as! AppDelegate)
+        let context: NSManagedObjectContext = appDel.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserWeights")
         request.returnsObjectsAsFaults = false
         do {
-            var results: Array = try context.fetch(request)
-            var thisWeight = results[indexPath.row] as! UserWeights
+            let results: Array = try context.fetch(request)
+            let thisWeight = results[indexPath.row] as! UserWeights
             cell.textLabel?.text = thisWeight.weight! + "" + thisWeight.units!
             cell.detailTextLabel?.text = thisWeight.date!
         } catch {
@@ -49,5 +49,24 @@ class WeightLogViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let appDel = (UIApplication.shared.delegate as! AppDelegate)
+            let context : NSManagedObjectContext = appDel.persistentContainer.viewContext
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserWeights")
+            request.returnsObjectsAsFaults = false
+            do {
+                let results: Array = try context.fetch(request)
+                let thisWeight = results[indexPath.row] as! UserWeights
+                context.delete(thisWeight)
+                try context.save()
+                totalEntries  = totalEntries - 1
+                tbLog.deleteRows(at: [indexPath], with: .fade)
+            } catch {
+                print(error)
+            }
+        }
     }
 }
